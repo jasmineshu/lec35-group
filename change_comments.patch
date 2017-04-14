@@ -1,0 +1,33 @@
+Index: src/client/actions/comments.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/client/actions/comments.js	(date 1492192508000)
++++ src/client/actions/comments.js	(revision )
+@@ -5,7 +5,7 @@
+ // actions for getting comments (for display purposes)
+ export const commentsRequest = (username) => {
+     return {
+-        type: 'COMMENT:REQUEST',
++        type: 'COMMENTS:REQUEST',
+         username: username //can only request comments if valid user
+         // no comments here, ony returned on commentSucceed
+     }
+@@ -13,14 +13,14 @@
+ 
+ export const commentsSucceed = () => { //middleware: you may need to coordinate request w/ succeed/error actions??
+     return {
+-        type: 'COMMENT:SUCCEED',
++        type: 'COMMENTS:SUCCEED',
+         comments: comments
+     }
+ };
+ 
+ export const commentsError = () => {
+     return {
+-        type: 'COMMENT:ERROR',
++        type: 'COMMENTS:ERROR',
+         error: error
+     }
+ };
